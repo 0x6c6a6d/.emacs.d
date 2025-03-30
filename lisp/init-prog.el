@@ -23,4 +23,14 @@
   :config
   (setq vc-follow-symlinks t))
 
+;; Scheme 配置 
+(load "./scheme-prog.el")
+(use-package scheme-mode-hook
+  :init
+  (setq scheme-program-name "chez")
+  :bind (("<f5>" . scheme-send-last-sexp-split-window)
+	 ("<f6>" . scheme-send-definition-split-window)))
+
+
 (provide 'init-prog)
+

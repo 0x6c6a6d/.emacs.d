@@ -15,11 +15,13 @@
   :config
   (setq completion-styles '(orderless)
         completion-category-defaults nil
+        read-file-name-completion-ignore-case t
+        read-buffer-completion-ignore-case t
+        completion-ignore-case t
         completion-category-overrides
         '((file (styles basic partial-completion))  ; 文件路径混合补全
           (buffer (styles orderless))
-          (symbol (styles orderless))
-          (eglot (styles orderless)))))
+          (symbol (styles orderless)))))
 
 ;; 注解增强
 (use-package marginalia
@@ -28,7 +30,8 @@
   :config
   (marginalia-mode)
   (setq marginalia-align 'right
-        marginalia-annotators '(marginalia-annotators-heavy)))
+        marginalia-annotators '(marginalia-annotators-heavy marginalia-annotators-light)
+        completions-detailed t))
 
 ;; 即时补全界面
 (use-package corfu
@@ -37,6 +40,7 @@
   :custom
   (corfu-auto t)
   (corfu-cycle t)
+  (corfu-preselect 'prompt)
   (corfu-separator ?\s)
   (corfu-quit-at-boundary 'separator)
   :config
