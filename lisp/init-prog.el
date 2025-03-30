@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; 编程配置
 (use-package prog-mode
   :ensure nil
@@ -30,7 +32,6 @@
   (setq scheme-program-name "chez")
   :bind (("<f5>" . scheme-send-last-sexp-split-window)
 	 ("<f6>" . scheme-send-definition-split-window)))
-
 
 (provide 'init-prog)
 

@@ -1,4 +1,4 @@
-;; eglot-c.el
+;; -*- lexical-binding: t; -*-
 
 ;; 一键运行程序
 (defun arch/run-c-program ()
@@ -35,7 +35,6 @@
 ;; 增强模式初始化
 (defun arch/c-init ()
   (setq-local compile-command (arch/compile-c-command))
-  ;(eglot-ensure) ; LSP 初始化
   (local-set-key (kbd "C-c C-c") #'compile)
   (local-set-key (kbd "C-c C-r") #'arch/run-c-program))
 

@@ -3,8 +3,6 @@
 (load "~/.emacs.d/local/eglot-uv-python.el")
 (load "~/.emacs.d/local/eglot-c.el")
 
-
-;; ==================== 统一 Eglot 配置 ====================
 (use-package eglot
   :ensure nil
   :hook
@@ -28,7 +26,7 @@
 				"--clang-tidy"
 				"--header-insertion=never"
 				"--pch-storage=memory"))
-          (python-mode . ("pylsp"))))
+          (python-mode . ("pyright-langserver" "--stdio"))))
 
   ;; Vertico+Orderless搜索增强
   (setq completion-category-overrides '((eglot (styles orderless)))) ; LSP结果使用orderless

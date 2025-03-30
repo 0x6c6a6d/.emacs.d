@@ -1,4 +1,4 @@
-;;; init-completion.el --- 现代化补全堆栈配置 -*- lexical-binding: t; -*-
+;;-*- lexical-binding: t; -*-
 
 ;; 垂直补全框架
 (use-package vertico
@@ -44,11 +44,13 @@
   (corfu-separator ?\s)
   (corfu-quit-at-boundary 'separator)
   :config
+
   ;; 终端优化
   (when (not (display-graphic-p))
     (setq corfu-popupinfo-delay nil
           corfu-auto-delay 0.2)
     (corfu-terminal-mode +1))
+
   ;; 布局设置
   (setq corfu-min-width 40
         corfu-max-width 120
