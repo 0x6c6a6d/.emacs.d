@@ -4,7 +4,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-(provide 'init-package)
+(require 'init-package)
 (require 'init-core)
 (require 'init-ui)
 (require 'init-completion)
