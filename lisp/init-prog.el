@@ -26,7 +26,7 @@
   (setq vc-follow-symlinks t))
 
 ;; Scheme 配置 
-(load "./scheme-prog.el")
+(load "~/.emacs.d/local/scheme-prog.el")
 (use-package scheme-mode-hook
   :init
   (setq scheme-program-name "chez")

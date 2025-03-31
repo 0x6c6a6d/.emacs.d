@@ -7,6 +7,6 @@
 	       ("nongnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
 	       ("melpa"  . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
     (add-to-list 'package-archives i))
-  (unless (bound-and-true-p package--initialized)))
+    (package-initialize))
 
 (provide 'init-package)

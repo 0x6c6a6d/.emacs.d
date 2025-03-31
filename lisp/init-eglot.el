@@ -4,6 +4,7 @@
 (load "~/.emacs.d/local/eglot-c.el")
 
 (use-package eglot
+  :after (vertico orderless)
   :ensure nil
   :hook
   (((c-mode c++-mode) . (lambda ()

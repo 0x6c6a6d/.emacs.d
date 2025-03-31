@@ -38,4 +38,4 @@
   (scheme-split-window)
   (scheme-send-definition))
 
-(provide 'init-scheme)
+(provide 'scheme-prog)
